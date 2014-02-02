@@ -34,12 +34,8 @@ private:
 
 	OBSScene GetCurrentScene();
 	OBSSceneItem GetCurrentSceneItem();
-	void AddSceneItem(obs_sceneitem_t item);
-	void RemoveSceneItem(obs_sceneitem_t item);
-	void AddScene(obs_source_t scene);
-	void RemoveScene(obs_source_t scene);
-	void UpdateSources(obs_scene_t scene);
-	void UpdateSceneSelection(obs_source_t source);
+
+	void UpdateSources(OBSScene scene);
 
 	/* OBS Callbacks */
 	static void SceneItemAdded(void *data, calldata_t params);
@@ -84,6 +80,12 @@ private slots:
 	void on_actionSourceUp_triggered();
 	void on_actionSourceDown_triggered();
 	void on_settingsButton_clicked();
+
+	void AddSceneItem(OBSSceneItem item);
+	void RemoveSceneItem(OBSSceneItem item);
+	void AddScene(OBSSource scene);
+	void RemoveScene(OBSSource scene);
+	void UpdateSceneSelection(OBSSource source);
 
 public:
 	explicit OBSBasic(QWidget *parent = 0);
