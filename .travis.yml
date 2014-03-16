@@ -13,25 +13,30 @@ before_install:
 - sudo apt-add-repository ppa:sonkun/sfml-development -y
 - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
 - sudo apt-add-repository ppa:ubuntu-sdk-team/ppa     -y
+- sudo apt-add-repository ppa:kalakris/cmake          -y
 - sudo apt-get update -qq
 
 # Depency install
 install:
   # update gcc
+- apt-cache search g++
 - sudo apt-get install -qq g++-4.8
+  # update cmake 2.8 to 2.11
+- apt-cache search cmake
+- sudo apt-get install cmake
+
   # lib install
   # opengl
-- sudo apt-get install mesa-common-dev #opengl
+- sudo apt-get install mesa-common-dev
   #glew
-- sudo apt-get install libxrandr-dev libfreetype6-dev libglew1.5-dev    #glew
+- sudo apt-get install libxrandr-dev libfreetype6-dev libglew1.5-dev
   #ffmpeg
   #for lucid ubuntu 10.02
   #- sudo apt-get install libavcodec-unstripped-52 libavdevice-unstripped-52 libavformat-unstripped-52 libavutil-unstripped-50 libpostproc-unstripped-51 libswscale-unstripped-0 ffmpeg
   # for precise ubuntu 12.04
 - sudo apt-get install libav-tools ffmpeg
   #qt5
-- sudo apt-get install qtdeclarative5-dev #qt 5
-
+- sudo apt-get install qtdeclarative5-dev 
 #after_install:
 
 - if [ "$CXX" = "g++" ]; then export CXX="g++-4.8" CC="gcc-4.8"; fi
