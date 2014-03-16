@@ -38,7 +38,9 @@ install:
 #define FFmpeg path to lib 32 and lib 64 ?
 
 # Build
-script : mkdir build && cd build/ && $CXX -v && cmake .. && make
+script : cd build/ && $CXX -v && cmake .. && make
+
+  #mkdir build && 
 
 # Choose branchs
 branches:
