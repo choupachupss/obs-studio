@@ -23,7 +23,10 @@ install:
   #glew
 - sudo apt-get install libxrandr-dev libfreetype6-dev libglew1.5-dev    #glew
   #ffmpeg
-- sudo apt-get install libavcodec-unstripped-52 libavdevice-unstripped-52 libavformat-unstripped-52 libavutil-unstripped-50 libpostproc-unstripped-51 libswscale-unstripped-0 ffmpeg
+  #for lucid ubuntu 10.02
+  #- sudo apt-get install libavcodec-unstripped-52 libavdevice-unstripped-52 libavformat-unstripped-52 libavutil-unstripped-50 libpostproc-unstripped-51 libswscale-unstripped-0 ffmpeg
+  # for precise ubuntu 12.04
+- sudo apt-get install libav-tools ffmpeg
   #qt5
 - sudo apt-get install qt5-default qttools5-dev-tools #qt 5
 
