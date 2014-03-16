@@ -19,7 +19,7 @@ before_install:
 # Depency install
 install:
   # update gcc
-- apt-cache search g++
+  #- apt-cache search g++
 - sudo apt-get install -qq g++-4.8
   # update cmake 2.8 to 2.11
 - apt-cache search cmake
