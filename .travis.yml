@@ -30,7 +30,7 @@ install:
   # for precise ubuntu 12.04
 - sudo apt-get install libav-tools ffmpeg
   #qt5
-- sudo apt-get install qtdeclaratives5-dev #qt 5
+- sudo apt-get install qtdeclarative5-dev #qt 5
 
 #after_install:
 
