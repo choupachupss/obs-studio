@@ -9,8 +9,10 @@ compiler:
   - gcc
 
 before_install:
+  # add source of ppa
 - sudo apt-add-repository ppa:sonkun/sfml-development -y
 - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
+  sudo apt-add-repository ppa:ubuntu-sdk-team/ppa     -y
 - sudo apt-get update -qq
 
 # Depency install
@@ -28,7 +30,7 @@ install:
   # for precise ubuntu 12.04
 - sudo apt-get install libav-tools ffmpeg
   #qt5
-- sudo apt-get install qt5-default qttools5-dev-tools #qt 5
+- sudo apt-get install qtdeclaratives5-dev #qt 5
 
 #after_install:
 
